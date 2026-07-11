@@ -1,1 +1,181 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>UPHeadline | Latest News</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Top Header -->
+
+<div class="topbar">
+
+<div class="container">
+
+<div>
+
+📍 India | Breaking News | Live
+
+</div>
+
+<div>
+
+<span id="liveDate"></span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Header -->
+
+<header class="header">
+
+<div class="container header-flex">
+
+<div class="logo">
+
+📰 UPHeadline
+
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search News...">
+
+<button>
+
+🔍
+
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- Navigation -->
+
+<nav class="navbar">
+
+<div class="container">
+
+<a href="index.html">Home</a>
+
+<a href="#">UP</a>
+
+<a href="#">India</a>
+
+<a href="#">World</a>
+
+<a href="#">Politics</a>
+
+<a href="#">Business</a>
+
+<a href="#">Sports</a>
+
+<a href="#">Technology</a>
+
+<a href="#">Entertainment</a>
+
+</div>
+
+</nav>
+
+<!-- Breaking -->
+
+<div class="breaking">
+
+<div class="breaking-title">
+
+Breaking
+
+</div>
+
+<marquee id="breakingNews">
+
+🔥 Welcome to UPHeadline CMS
+
+</marquee>
+
+</div>
+
+<!-- Hero -->
+
+<section class="hero">
+
+<div class="hero-overlay">
+
+<h1>
+
+UPHeadline
+
+</h1>
+
+<p>
+
+Fast • Trusted • First
+
+</p>
+
+</div>
+
+</section>
+
+<!-- Latest -->
+
+<section class="container">
+
+<h2 class="section-title">
+
+Latest News
+
+</h2>
+
+<div
+id="newsContainer"
+class="news-grid">
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<p>
+
+© 2026 UPHeadline | All Rights Reserved
+
+</p>
+
+</div>
+
+</footer>
+
+<script type="module" src="js/app.js"></script>
+
+<script>
+
+document.getElementById("liveDate").innerHTML =
+new Date().toLocaleString();
+
+</script>
+
+</body>
+</html>
