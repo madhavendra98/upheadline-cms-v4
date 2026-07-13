@@ -4,34 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>UPHeadline | Latest News</title>
+<title>UPHeadline - Latest Hindi News</title>
+
+<meta name="description" content="UPHeadline - Latest Breaking News from Uttar Pradesh, India and World.">
 
 <link rel="stylesheet" href="css/style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<!-- Top Header -->
+<!-- Top Bar -->
 
 <div class="topbar">
 
-<div class="container">
+<div class="container topbar-flex">
 
 <div>
 
-📍 India | Breaking News | Live
+📍 Uttar Pradesh | India
 
 </div>
 
-<div>
-
-<span id="liveDate"></span>
-
-</div>
+<div id="currentDate"></div>
 
 </div>
 
@@ -43,11 +41,11 @@
 
 <div class="container header-flex">
 
-<div class="logo">
+<a href="index.html" class="logo">
 
-📰 UPHeadline
+📰 <span>UPHeadline</span>
 
-</div>
+</a>
 
 <div class="search-box">
 
@@ -56,7 +54,7 @@ type="text"
 id="searchInput"
 placeholder="Search News...">
 
-<button>
+<button id="searchBtn">
 
 🔍
 
@@ -74,31 +72,27 @@ placeholder="Search News...">
 
 <div class="container">
 
-<a href="index.html">Home</a>
+<ul>
 
-<a href="#">UP</a>
+<li><a href="#">Home</a></li>
+<li><a href="#">UP</a></li>
+<li><a href="#">India</a></li>
+<li><a href="#">World</a></li>
+<li><a href="#">Politics</a></li>
+<li><a href="#">Business</a></li>
+<li><a href="#">Sports</a></li>
+<li><a href="#">Technology</a></li>
+<li><a href="#">Entertainment</a></li>
 
-<a href="#">India</a>
-
-<a href="#">World</a>
-
-<a href="#">Politics</a>
-
-<a href="#">Business</a>
-
-<a href="#">Sports</a>
-
-<a href="#">Technology</a>
-
-<a href="#">Entertainment</a>
+</ul>
 
 </div>
 
 </nav>
 
-<!-- Breaking -->
+<!-- Breaking News -->
 
-<div class="breaking">
+<div class="breaking-bar">
 
 <div class="breaking-title">
 
@@ -108,13 +102,13 @@ Breaking
 
 <marquee id="breakingNews">
 
-🔥 Welcome to UPHeadline CMS
+🔥 Welcome to UPHeadline
 
 </marquee>
 
 </div>
 
-<!-- Hero -->
+<!-- Hero Slider -->
 
 <section class="hero">
 
@@ -135,38 +129,12 @@ Fast • Trusted • First
 </div>
 
 </section>
+
+<!-- Main Content -->
+
 <div class="container main-layout">
 
-    <!-- Left Side -->
-    <div class="left-content">
-
-        <h2 class="section-title">Latest News</h2>
-
-        <div id="newsContainer" class="news-grid"></div>
-
-    </div>
-
-    <!-- Right Sidebar -->
-    <aside class="sidebar">
-
-        <h2>🔥 Trending News</h2>
-
-        <div id="trendingNews"></div>
-
-        <br>
-
-        <h2>📢 Live Updates</h2>
-
-        <div class="live-box">
-            UPHeadline Live 24×7
-        </div>
-
-    </aside>
-
-</div>
-<!-- Latest -->
-
-<section class="container">
+<div class="left-content">
 
 <h2 class="section-title">
 
@@ -174,34 +142,169 @@ Latest News
 
 </h2>
 
-<div
-id="newsContainer"
-class="news-grid">
+<div id="newsContainer" class="news-grid">
+
+<!-- Firebase News -->
 
 </div>
 
-</section>
+</div>
+
+<aside class="sidebar">
+
+<h2>
+
+🔥 Trending
+
+</h2>
+
+<div id="trendingNews">
+
+Loading...
+
+</div>
+<div class="trending-list">
+
+<div class="trend-item">
+<span>1</span>
+<p id="trend1">Loading...</p>
+</div>
+
+<div class="trend-item">
+<span>2</span>
+<p id="trend2">Loading...</p>
+</div>
+
+<div class="trend-item">
+<span>3</span>
+<p id="trend3">Loading...</p>
+</div>
+
+<div class="trend-item">
+<span>4</span>
+<p id="trend4">Loading...</p>
+</div>
+
+<div class="trend-item">
+<span>5</span>
+<p id="trend5">Loading...</p>
+</div>
+
+</div>
+
+<div class="sidebar-box">
+
+<h3>📢 Live Updates</h3>
+
+<p>
+Breaking News updates will appear here automatically.
+</p>
+
+</div>
+
+<div class="sidebar-box">
+
+<h3>🌤 Weather</h3>
+
+<p>Coming Soon</p>
+
+</div>
+
+<div class="sidebar-box">
+
+<h3>📱 Follow Us</h3>
+
+<a href="#">Facebook</a><br>
+<a href="#">Instagram</a><br>
+<a href="#">YouTube</a>
+
+</div>
+
+</aside>
+
+</div>
 
 <footer>
 
-<div class="container">
+<div class="container footer-grid">
+
+<div>
+
+<h3>UPHeadline</h3>
 
 <p>
 
-© 2026 UPHeadline | All Rights Reserved
+Latest News from Uttar Pradesh,
+India and World.
 
 </p>
 
 </div>
 
-</footer>
+<div>
 
+<h3>Quick Links</h3>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">Privacy Policy</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>Categories</h3>
+
+<ul>
+
+<li>UP</li>
+<li>India</li>
+<li>World</li>
+<li>Sports</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 UPHeadline. All Rights Reserved.
+
+</div>
+
+</footer>
 <script type="module" src="js/app.js"></script>
 
 <script>
 
-document.getElementById("liveDate").innerHTML =
-new Date().toLocaleString();
+// Current Date & Time
+
+const currentDate = document.getElementById("currentDate");
+
+function updateDate(){
+
+const options = {
+
+weekday:"long",
+day:"numeric",
+month:"long",
+year:"numeric"
+
+};
+
+currentDate.innerHTML =
+new Date().toLocaleDateString("hi-IN",options);
+
+}
+
+updateDate();
 
 </script>
 
