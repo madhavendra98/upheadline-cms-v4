@@ -30,7 +30,24 @@ onValue(ref(db, "news"), (snapshot) => {
 
 // Show News Function
 function showNews(newsArray){
+const trending = document.getElementById("trendingNews");
 
+if(trending){
+
+    trending.innerHTML = "";
+
+    newsArray.slice(0,5).forEach(([id,news])=>{
+
+        trending.innerHTML += `
+        <div class="trending-item"
+        onclick="location.href='news.html?id=${id}'">
+            ${news.title}
+        </div>
+        `;
+
+    });
+
+}
     newsContainer.innerHTML = "";
 
     newsArray.forEach(([id, news]) => {
