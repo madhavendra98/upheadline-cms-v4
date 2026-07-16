@@ -1,287 +1,69 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>UPHeadline - Latest Hindi News</title>
-
-<meta name="description" content="UPHeadline - Latest Breaking News from Uttar Pradesh, India and World.">
-
+<title>UPHeadline News</title>
 <link rel="stylesheet" href="css/style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
-<!-- Top Bar -->
-
-<div class="topbar">
-
-<div class="container topbar-flex">
-
-<div class="top-left">
-
-📍 Uttar Pradesh | India
-
-</div>
-
-<div class="top-right">
-
-<span id="currentDate"></span>
-
-</div>
-
-</div>
-
-</div>
-
 <!-- Header -->
-
 <header class="header">
+  <div class="container header-flex">
 
-<div class="container header-flex">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="UPHeadline Logo">
+    </a>
 
-<a href="index.html" class="logo">
+    <div class="search-box">
+      <input type="text" placeholder="खबर खोजें...">
+      <button>🔍</button>
+    </div>
 
-<img src="images/logo.png" alt="UPHeadline Logo">
+    <a href="#" class="live-btn">🔴 LIVE</a>
 
-</a>
-
-<div class="search-box">
-
-<input
-type="text"
-id="searchInput"
-placeholder="खबर खोजें...">
-
-<button id="searchBtn">
-🔍
-</button>
-
-</div>
-
-<div class="live-btn">
-
-<a href="#">🔴 LIVE</a>
-
-</div>
-
-</div>
-
+  </div>
 </header>
 
-<!-- Navigation -->
-
+<!-- Navbar -->
 <nav class="navbar">
-
-<div class="container">
-
-<ul>
-
-<li><a href="#">Home</a></li>
-<li><a href="#">UP</a></li>
-<li><a href="#">India</a></li>
-<li><a href="#">World</a></li>
-<li><a href="#">Politics</a></li>
-<li><a href="#">Business</a></li>
-<li><a href="#">Sports</a></li>
-<li><a href="#">Technology</a></li>
-<li><a href="#">Entertainment</a></li>
-
-</ul>
-
-</div>
-
+  <div class="container">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">UP</a></li>
+      <li><a href="#">India</a></li>
+      <li><a href="#">World</a></li>
+      <li><a href="#">Sports</a></li>
+      <li><a href="#">Business</a></li>
+    </ul>
+  </div>
 </nav>
 
-<!-- Breaking News -->
-
-<div class="breaking-bar">
-
-<div class="breaking-title">
-
-Breaking
-
-</div>
-
-<marquee id="breakingNews">
-
-🔥 Welcome to UPHeadline
-
-</marquee>
-
-</div>
-
-<!-- Hero -->
-
+<!-- Hero Banner -->
 <section class="hero"></section>
-<!-- Main -->
 
-<div class="container main-layout">
-
-<div class="left-content">
-
-<h2 class="section-title">
-
-Latest News
-
-</h2>
-
-<div id="newsContainer" class="news-grid">
-
+<!-- Breaking News -->
+<div class="breaking-bar">
+  <div class="breaking-title">BREAKING</div>
+  <marquee>🔥 Welcome to UPHeadline News • ताज़ा खबरें सबसे पहले</marquee>
 </div>
 
-</div>
-
-<aside class="sidebar">
-
-<h2>🔥 Trending</h2>
-
-<div class="trending-list">
-
-<div class="trend-item">
-<span>1</span>
-<p id="trend1">Loading...</p>
-</div>
-
-<div class="trend-item">
-<span>2</span>
-<p id="trend2">Loading...</p>
-</div>
-
-<div class="trend-item">
-<span>3</span>
-<p id="trend3">Loading...</p>
-</div>
-
-<div class="trend-item">
-<span>4</span>
-<p id="trend4">Loading...</p>
-</div>
-
-<div class="trend-item">
-<span>5</span>
-<p id="trend5">Loading...</p>
-</div>
-
-</div>
-
-<div class="sidebar-box">
-
-<h3>📢 Live Updates</h3>
-
-<p>Breaking News updates will appear here automatically.</p>
-
-</div>
-
-<div class="sidebar-box">
-
-<h3>🌤 Weather</h3>
-
-<p>Coming Soon</p>
-
-</div>
-
-<div class="sidebar-box">
-
-<h3>📱 Follow Us</h3>
-
-<a href="#">Facebook</a><br>
-<a href="#">Instagram</a><br>
-<a href="#">YouTube</a>
-
-</div>
-
-</aside>
-
+<!-- Latest News -->
+<div class="container">
+  <h2 class="section-title">Latest News</h2>
+  <div id="newsContainer" class="news-grid"></div>
 </div>
 
 <!-- Footer -->
-
 <footer>
-
-<div class="container footer-grid">
-
-<div>
-
-<h3>UPHeadline</h3>
-
-<p>
-
-Latest News from Uttar Pradesh, India and World.
-
-</p>
-
-</div>
-
-<div>
-
-<h3>Quick Links</h3>
-
-<ul>
-
-<li><a href="#">Home</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Contact</a></li>
-<li><a href="#">Privacy Policy</a></li>
-
-</ul>
-
-</div>
-
-<div>
-
-<h3>Categories</h3>
-
-<ul>
-
-<li>UP</li>
-<li>India</li>
-<li>World</li>
-<li>Sports</li>
-
-</ul>
-
-</div>
-
-</div>
-
-<div class="copyright">
-
-© 2026 UPHeadline. All Rights Reserved.
-
-</div>
-
+  <div class="container">
+    <p>© 2026 UPHeadline News • All Rights Reserved</p>
+  </div>
 </footer>
 
 <script type="module" src="js/app.js"></script>
-
-<script>
-
-const currentDate=document.getElementById("currentDate");
-
-if(currentDate){
-
-currentDate.innerHTML=new Date().toLocaleDateString("hi-IN",{
-
-weekday:"long",
-
-day:"numeric",
-
-month:"long",
-
-year:"numeric"
-
-});
-
-}
-
-</script>
-
 </body>
 </html>
