@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="hi">
-
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>UPHeadline News</title>
@@ -14,19 +12,77 @@
 <style>
 
 .news-page{
-
 max-width:1000px;
-
-margin:40px auto;
-
-background:white;
-
+margin:30px auto;
+background:#fff;
 padding:25px;
-
 border-radius:10px;
-
 box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
 
+.news-page img{
+width:100%;
+max-height:500px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.news-title{
+font-size:34px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.news-date{
+color:#777;
+margin-bottom:20px;
+font-size:14px;
+}
+
+.news-content{
+font-size:20px;
+line-height:1.9;
+color:#333;
+}
+
+.share-box{
+margin-top:30px;
+padding-top:20px;
+border-top:1px solid #ddd;
+}
+
+.share-box a{
+display:inline-block;
+padding:10px 18px;
+margin-right:10px;
+border-radius:5px;
+text-decoration:none;
+color:#fff;
+font-weight:bold;
+}
+
+.fb{
+background:#1877f2;
+}
+
+.wa{
+background:#25D366;
+}
+
+.x{
+background:#000;
+}
+
+.back-home{
+display:inline-block;
+margin-top:25px;
+padding:12px 25px;
+background:#d60000;
+color:#fff;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
 }
 
 </style>
@@ -35,19 +91,65 @@ box-shadow:0 5px 20px rgba(0,0,0,.15);
 
 <body>
 
+<!-- HEADER -->
+
 <header class="header">
 
 <div class="container header-flex">
 
 <a href="index.html" class="logo">
-
-📰 UPHeadline
-
+<img src="images/logo.png" alt="UPHeadline Logo">
 </a>
+
+<div class="search-box">
+<input type="text" placeholder="खबर खोजें...">
+<button>🔍</button>
+</div>
 
 </div>
 
 </header>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="container">
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#">UP</a></li>
+<li><a href="#">India</a></li>
+<li><a href="#">World</a></li>
+<li><a href="#">Politics</a></li>
+<li><a href="#">Sports</a></li>
+<li><a href="#">Business</a></li>
+<li><a href="#">Technology</a></li>
+</ul>
+
+</div>
+
+</nav>
+
+<!-- BREAKING -->
+
+<div class="breaking-bar">
+
+<div class="breaking-title">
+
+Breaking
+
+</div>
+
+<marquee>
+
+🔥 UPHeadline Breaking News
+
+</marquee>
+
+</div>
+
+<!-- NEWS -->
 
 <div class="container">
 
@@ -59,8 +161,56 @@ box-shadow:0 5px 20px rgba(0,0,0,.15);
 
 </div>
 
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-grid">
+
+<div>
+
+<h3>UPHeadline</h3>
+
+<p>
+Latest News from Uttar Pradesh, India and World.
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
+
+</div>
+
+<div>
+
+<h3>Follow Us</h3>
+
+<p>Facebook</p>
+<p>Instagram</p>
+<p>YouTube</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 UPHeadline News
+
+</div>
+
+</footer>
+
 <script type="module" src="js/news.js"></script>
 
 </body>
-
 </html>
