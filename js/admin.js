@@ -23,7 +23,7 @@ window.publishNews = async function () {
 
     const title = document.getElementById("title").value.trim();
 
-    const description = window.editor.getData();
+    const description = tinymce.get("description").getContent();
 
     const category =
     document.getElementById("category").value;
