@@ -23,8 +23,7 @@ window.publishNews = async function () {
 
     const title = document.getElementById("title").value.trim();
 
-    const description =
-    document.getElementById("description").value.trim();
+    const description = editor.getData().trim();
 
     const category =
     document.getElementById("category").value;
