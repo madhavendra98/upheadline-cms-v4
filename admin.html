@@ -268,38 +268,56 @@ placeholder="🔥 Breaking News Text">
 
 <!-- CKEDITOR -->
 
-<script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/super-build/ckeditor.js"></script>
 
 <script>
 
-let editor;
+CKEDITOR.ClassicEditor.create(document.querySelector("#description"),{
 
-ClassicEditor
-.create(document.querySelector('#description'))
-.then(newEditor => {
-    editor = newEditor;
+toolbar:{
+items:[
+'heading',
+'|',
+'bold',
+'italic',
+'underline',
+'fontSize',
+'fontFamily',
+'fontColor',
+'fontBackgroundColor',
+'|',
+'bulletedList',
+'numberedList',
+'|',
+'link',
+'insertTable',
+'undo',
+'redo'
+]
+}
+
 })
-.catch(error => {
-    console.error(error);
+.then(editor=>{
+window.editor=editor;
+})
+.catch(error=>{
+console.error(error);
 });
 
-// IMAGE PREVIEW
+// Image Preview
 
-document.getElementById('imageFile').addEventListener('change', function(e){
+document.getElementById("imageFile").addEventListener("change",function(e){
 
-const file = e.target.files[0];
+const file=e.target.files[0];
 
 if(!file) return;
 
-const reader = new FileReader();
+const reader=new FileReader();
 
-reader.onload = function(event){
+reader.onload=function(ev){
 
-const preview = document.getElementById('preview');
-
-preview.src = event.target.result;
-
-preview.style.display = 'block';
+document.getElementById("preview").src=ev.target.result;
+document.getElementById("preview").style.display="block";
 
 }
 
