@@ -196,7 +196,20 @@ placeholder="Breaking News Text">
 </button>
 
 </div>
+<script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
 
+<script>
+let editor;
+
+ClassicEditor
+.create(document.querySelector('#description'))
+.then(newEditor => {
+    editor = newEditor;
+})
+.catch(error => {
+    console.error(error);
+});
+</script>
 <script type="module" src="js/admin.js"></script>
 </body>
 </html>
