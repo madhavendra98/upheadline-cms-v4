@@ -126,7 +126,9 @@ ${news.category}
 
 <h3>${news.title}</h3>
 
-<p>${news.description.substring(0,120)}...</p>
+<p>
+${news.description.replace(/<[^>]*>/g,"").substring(0,120)}...
+</p>
 
 <button onclick="editNews('${id}')">
 ✏️ Edit
@@ -172,6 +174,10 @@ window.editNews = async function(id){
 
     if(title==null) return;
 
+    const caption = prompt("Photo Caption");
+
+    if(caption==null) return;
+
     const description = prompt("New Description");
 
     if(description==null) return;
@@ -179,6 +185,7 @@ window.editNews = async function(id){
     await update(ref(db,"news/"+id),{
 
         title,
+        caption,
         description
 
     });
