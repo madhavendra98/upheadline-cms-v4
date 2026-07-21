@@ -8,7 +8,7 @@
 <title>UPHeadline CMS Admin</title>
 
 <link rel="stylesheet" href="css/style.css">
-
+<link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet">
 <style>
 
 body{
@@ -211,10 +211,9 @@ placeholder="📷 Photo Caption">
 
 <!-- DESCRIPTION -->
 
-<textarea
-id="description"
-placeholder="Write full news here..."></textarea>
+<label><b>📝 News Description</b></label>
 
+<div id="editor" style="height:350px;background:#fff;"></div>
 <!-- OPTIONS -->
 
 <div class="options">
@@ -269,35 +268,53 @@ placeholder="🔥 Breaking News Text">
 </script>
 
 <!-- ADMIN JS -->
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
 
-<script type="module" src="js/admin.js"></script>
-<script src="https://cdn.tiny.cloud/1/tkpqe256b383j4ez0yzxajs8g2y2dw5dmojr0y1jr5a4m10k/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
-  <script>
-tinymce.init({
-  selector: '#description',
-  height: 450,
+<script>
+const quill = new Quill('#editor', {
+    theme: 'snow',
+    modules: {
+        toolbar: [
+            [{ header: [1,2,3,false] }],
+            ['bold','italic','underline','strike'],
+            [{ color: [] }, { background: [] }],
+            [{ align: [] }],
+            [{ list: 'ordered' }, { list: 'bullet' }],
+            ['blockquote','code-block'],
+            ['link','image'],
+            ['clean']
+        ]
+    }
+});
 
-  menubar: true,
+// admin.js में उपयोग करने के लिए
+window.quill = quill;
 
-  plugins: [
-    'advlist','autolink','lists','link','image',
-    'charmap','preview','anchor','searchreplace',
-    'visualblocks','code','fullscreen',
-    'insertdatetime','media','table',
-    'wordcount'
-  ],
+// Image Preview
+document.getElementById("imageFile").addEventListener("change", function(e){
 
-  toolbar:
-    'undo redo | blocks | ' +
-    'bold italic underline | ' +
-    'forecolor backcolor | ' +
-    'fontsize fontfamily | ' +
-    'alignleft aligncenter alignright alignjustify | ' +
-    'bullist numlist outdent indent | ' +
-    'link image media table | ' +
-    'removeformat code preview fullscreen'
+    const file = e.target.files[0];
+
+    if(!file) return;
+
+    const reader = new FileReader();
+
+    reader.onload = function(event){
+
+        const preview = document.getElementById("preview");
+
+        preview.src = event.target.result;
+
+        preview.style.display = "block";
+
+    };
+
+    reader.readAsDataURL(file);
+
 });
 </script>
-  
+
+<script type="module" src="js/admin.js"></script>
+
 </body>
 </html>
