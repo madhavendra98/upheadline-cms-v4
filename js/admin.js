@@ -24,13 +24,10 @@ window.publishNews = async function () {
     const title = document.getElementById("title").value.trim();
 
     const description = window.quill.root.innerHTML;
-
-    const category =
-    document.getElementById("category").value;
-    const caption =
-    document.getElementById("caption").value.trim();
-    const file =
-    document.getElementById("imageFile").files[0];
+    const category = document.getElementById("category").value;
+    const caption = document.getElementById("caption").value.trim();
+    console.log("Caption =", caption);
+    const file = document.getElementById("imageFile").files[0];
 
     if(!title || !description){
 
