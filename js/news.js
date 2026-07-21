@@ -10,11 +10,13 @@ const newsId = params.get("id");
 const newsContainer = document.getElementById("newsDetails");
 
 if (!newsId) {
+
     newsContainer.innerHTML = `
-        <h2 style="text-align:center;color:red">
+        <h2 style="text-align:center;color:red;">
             News Not Found
         </h2>
     `;
+
 } else {
 
     onValue(ref(db, "news/" + newsId), (snapshot) => {
@@ -22,7 +24,7 @@ if (!newsId) {
         if (!snapshot.exists()) {
 
             newsContainer.innerHTML = `
-                <h2 style="text-align:center;color:red">
+                <h2 style="text-align:center;color:red;">
                     News Not Found
                 </h2>
             `;
@@ -36,34 +38,64 @@ if (!newsId) {
 
         const pageUrl = window.location.href;
 
+        let newsDate = "";
+
+        if(news.date){
+
+            newsDate = new Date(news.date).toLocaleString("hi-IN");
+
+        }else{
+
+            newsDate = new Date().toLocaleString("hi-IN");
+
+        }
+
         newsContainer.innerHTML = `
 
         <img src="${news.image}" class="news-main-image">
 
+        <p style="
+        text-align:center;
+        color:#666;
+        font-size:14px;
+        margin-top:8px;
+        font-style:italic;
+        ">
+
+        ${news.caption ? "📷 " + news.caption : ""}
+
+        </p>
+
         <div class="news-category">
+
             ${news.category || "Latest News"}
+
         </div>
 
         <h1 class="news-title">
+
             ${news.title}
+
         </h1>
 
         <div class="news-date">
 
             📰 UPHeadline |
-            ${news.date || new Date().toLocaleDateString("hi-IN")}
+            ${newsDate}
 
         </div>
 
         <div class="news-content">
 
-            ${news.description.replace(/\n/g,"<br><br>")}
+            ${news.description}
 
         </div>
 
+        <hr>
+
         <div class="share-box">
 
-            <h3>Share News</h3>
+            <h3>📤 Share News</h3>
 
             <a class="wa"
             target="_blank"
@@ -95,7 +127,7 @@ if (!newsId) {
 
         <a href="index.html" class="back-home">
 
-        🏠 Home
+            🏠 Home
 
         </a>
 
