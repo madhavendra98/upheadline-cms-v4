@@ -27,7 +27,8 @@ window.publishNews = async function () {
 
     const category =
     document.getElementById("category").value;
-
+    const caption =
+    document.getElementById("caption").value.trim();
     const file =
     document.getElementById("imageFile").files[0];
 
@@ -70,15 +71,16 @@ window.publishNews = async function () {
 
     }
 
-    await push(ref(db,"news"),{
+   await push(ref(db,"news"),{
 
-        title,
-        description,
-        category,
-        image,
-        date:Date.now()
+    title,
+    description,
+    category,
+    image,
+    caption,
+    date:Date.now()
 
-    });
+});
 
     alert("✅ News Published Successfully");
 
